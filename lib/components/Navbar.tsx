@@ -14,10 +14,9 @@ export default function Navbar() {
         <img src="/icons/Shiri.png" alt="icon" className="icon"></img>
       </Link>
       <nav>
-        <Link href="/">My Projects</Link>
+        <Link href="/projects">Projects</Link>
         <Link href="/cv">CV</Link>
-        <Link href="/#contact-section">Contact Information</Link>
-        
+        <Link href="/#contact-section">Contact Me</Link>
       </nav>
     </header>
   );
