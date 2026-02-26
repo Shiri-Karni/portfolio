@@ -323,7 +323,7 @@ button:hover {
   .single-project-link {
     justify-self: center;
     display: flex;
-    max-width: 50%;
+    width: fit-content;
 
   }
 }
