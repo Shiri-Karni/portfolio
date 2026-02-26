@@ -1,23 +1,21 @@
 @import url("reset.css");
-/* This is a custom font from google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
   /* Define design variables */
-  --color-primary: #2b2d42;
-  --color-secondary: #bfc6d2;
-  --color-background: #f5f5f5;
-  --color-accent: #535bf2;
-
+  --color-primary: #902858;
+  --color-secondary: #17181a;
+  --color-background:rgb(42, 44, 48)5;
   --border-radius: 0.5rem;
 
-  --font-titles: "Rubik", serif;
-  --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
+  --font-titles: "Parkinsans", serif;
+  --font-body: "Rubik", serif;
 }
 
 body {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   background-color: var(--color-background);
   font-family: var(--font-body);
 }
@@ -29,6 +27,10 @@ main {
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   padding: 1rem 2rem;
   background-color: var(--color-primary);
@@ -36,15 +38,8 @@ header {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+}
 
-  a {
-    text-decoration: none;
-    color: var(--color-background);
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
   h1 {
     margin: 0;
@@ -55,6 +50,14 @@ header {
     flex-direction: row;
     gap: 1rem;
   }
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+#navbar {
+  justify-content: space-between;
 }
 
 footer {
@@ -87,9 +90,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1rem;
   font-family: var(--font-titles);
-  font-weight: 500;
+  font-weight: 600;
   font-optical-sizing: auto;
 }
 
@@ -122,57 +124,129 @@ blockquote {
   border-left: 2px solid var(--color-secondary);
 }
 
+hr {
+  border: none;  
+  height: 1px;
+  background-color: #333; 
+  width: 100%;       
+  margin: 40px auto; 
+}
+
 /* Links */
 a {
-  color: var(--color-accent);
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: none;
 }
 
-/* Tables */
-table {
-  margin-top: 1.5rem;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-table td,
-table th {
-  padding: 0.5rem;
-  border: 1px solid var(--color-secondary);
-}
-
-/* Forms */
-input,
-button,
-textarea,
-select {
+button {
   padding: 0.2em 0.5em;
   border: 1px solid var(--color-secondary);
   border-radius: var(--border-radius);
 }
 
-fieldset {
-  margin-top: 1.5rem;
-  border: 1px solid var(--color-secondary);
-}
-
-.counter-button {
-  background-color: var(--color-accent);
-  width: 2rem;
-  height: 2rem;
-  color: white;
-  border: none;
-  border-radius: 1000px; /* Make the button round */
+button:hover {
   cursor: pointer;
-  font-weight: bold;
 
-  &:hover {
-    filter: brightness(120%);
-  }
-
-  &:active {
-    filter: brightness(80%);
-  }
 }
+
+.icon {
+  width:50px;
+  height:50px;
+  justify-self: flex-end;
+}
+
+.rightHeader {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.aboutMe {
+  font-style: italic;
+}
+
+.who-i-am {
+  line-height: 2;
+}
+
+.middleHeadline {
+  text-align: center;
+  margin: 1rem;
+}
+
+.mainPage {
+  gap: 10px;
+
+}
+
+.projects, .contact {
+  padding: 5% 10%;
+  margin: 10px;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.projects {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/icons/projects.jpg");
+}
+
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/icons/contact.jpg");
+}
+
+.projects:hover , 
+.contact:hover {
+  transform: scale(1.05); 
+  filter: brightness(0.9); 
+}
+
+.buttons-wrapper {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.contact-me {
+  text-align: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.socialContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socialIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: #d6669a;
+}
+
+.cv {
+  justify-self: center;
+}
+
