@@ -29,6 +29,13 @@ const projects = [
         description: "<p><em>Developed during the #BeSafe Hackathon (hosted by QueenB and AppsFlyer)</em></p><p>IMO is a community-driven chat platform designed to create a secure digital environment for teenage girls. The project focuses on bridging the gap between open social interaction and online safety.</p><h4><strong>Key Features:</strong></h4><ul><li><strong>Real-Time AI Moderation:</strong> Leveraging AI Agents to identify and intercept harmful or offensive content in real-time.</li><li><strong>Educational Feedback Loop:</strong> Providing users with constructive feedback on flagged messages to promote digital literacy.</li><li><strong>Fact-Checking Intelligence:</strong> Automatically highlighting factually inaccurate information to encourage critical thinking.</li><li><strong>Live Engagement:</strong> A seamless, real-time community experience.</li></ul><h4><strong>Technical Stack:</strong></h4><ul><li><strong>Backend:</strong> Developed a robust server-side architecture using Node.js.</li><li><strong>Real-Time Communication:</strong> Integrated Socket.io for low-latency, bi-directional communication.</li><li><strong>AI Integration:</strong> Connected with advanced AI Agents to perform real-time NLP (Natural Language Processing) and content filtering.</li><li><strong>Product & UX:</strong> Led the product lifecycle from initial characterization and UX design to a functional end-to-end prototype.</li></ul>",
         image: "/icons/imo.jpeg",
         link: "https://github.com/Shiri-Karni/BeSafeHackathonTeam10",
+    },
+        {
+        id: 5,
+        name: "The Influence of background colors on questionnaire responses - Research Project",
+        description: "<h4><strong>Overview:</strong></h4><p>Conducted a research project to explore how background colors influence individuals' responses to questionnaires. The study aimed to understand the psychological impact of color on decision-making and response patterns.</p><h4><strong>Key Findings:</strong></h4><ul><li><strong>Color Psychology:</strong> Identified specific colors that significantly affect mood and cognitive processing, leading to variations in response quality and quantity.</li><li><strong>Response Bias:</strong> Discovered that certain background colors can induce response bias, affecting the reliability of questionnaire data.</li><li><strong>Practical Implications:</strong> Provided actionable insights for researchers and practitioners on optimizing questionnaire design for improved data accuracy.</li></ul>",
+        image: "/icons/poster.png",
+        link: "/icons/Research Project.pdf",
     }
 ];
 
