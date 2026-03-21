@@ -5,6 +5,7 @@ import Contact from '../lib/components/Contact';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import React from 'react';
 
 
 
@@ -15,6 +16,7 @@ export default function Home() {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const [isLightboxOpen, setLightboxOpen] = React.useState(false);
   return (
     <main>
       <div className="mainPage">
@@ -27,7 +29,30 @@ export default function Home() {
         </div>
         <hr className="separator"></hr>
         <h2 className="middleHeadline">My Core Strengths</h2>
-        <img src="/icons/principles.svg" alt="strengths"></img>
+        <img
+          src="/icons/principles.svg"
+          alt="strengths"
+          className="principles-img"
+          onClick={() => setLightboxOpen(true)}
+        />
+        {isLightboxOpen && (
+          <div
+            className="lightbox-overlay"
+            onClick={() => setLightboxOpen(false)}
+          >
+            <img
+              src="/icons/principles.svg"
+              alt="strengths-large"
+              className="lightbox-img"
+              onClick={e => e.stopPropagation()}
+            />
+            <button
+              className="lightbox-close-btn"
+              onClick={() => setLightboxOpen(false)}
+              aria-label="סגור"
+            >x</button>
+          </div>
+        )}
         <hr className="separator"></hr>
         <div id="contact-section">
           <h2 className="middleHeadline">Contact Me</h2>
