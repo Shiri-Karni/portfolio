@@ -17,7 +17,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({ name, image, link, descri
           <img
             src={image}
             alt={name}
-            className="single-project-image principles-img"
+            className="single-project-image"
             onClick={() => setLightboxOpen(true)}
             style={{ cursor: 'pointer' }}
           />
