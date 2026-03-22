@@ -43,6 +43,13 @@ const projects = [
         description: "<p>Investigated the relationship between age and sleep patterns (ages 27–59) using <strong>descriptive and inferential statistics.</strong><br/> Utilized: <ul><li>linear regression (r ≈ 0.34)</li><li>Method of Moments for distribution modeling</li><li>hypothesis testing</li></ul><br/> to conclude that age does not significantly impact sleep duration within this demographic at a 3% significance level.</p>",
         image: "/icons/statistics.jpg",
         link: "https://github.com/Shiri-Noam-Team/Age-vs-Sleep-Duration",
+    },
+        {
+        id: 7,
+        name: "Israeli Patent Ecosystem Analysis & Classification - Research Project",
+        description: "<p>Analyzed 133,000 patent records (2015–2025) using <strong>network analysis</strong> to map collaborations between academia, industry, and defense sectors. Developed a <strong>machine learning pipeline</strong> utilizing <strong>TF-IDF vectorization</strong> and a <strong>Decision Tree classifier</strong> to predict patent categories with 81.15% accuracy.</p>",
+        image: "/icons/big-data.png",
+        link: "icons/patent-analysis.pdf",
     }
 ];
 
