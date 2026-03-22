@@ -36,6 +36,13 @@ const projects = [
         description: "<h4><strong>Overview:</strong></h4><p>Conducted a research project to explore how background colors influence individuals' responses to questionnaires. The study aimed to understand the psychological impact of color on decision-making and response patterns.</p><h4><strong>Key Findings:</strong></h4><ul><li><strong>Color Psychology:</strong> Identified specific colors that significantly affect mood and cognitive processing, leading to variations in response quality and quantity.</li><li><strong>Response Bias:</strong> Discovered that certain background colors can induce response bias, affecting the reliability of questionnaire data.</li><li><strong>Practical Implications:</strong> Provided actionable insights for researchers and practitioners on optimizing questionnaire design for improved data accuracy.</li></ul>",
         image: "/icons/poster.png",
         link: "/icons/Research Project.pdf",
+    },
+    {
+        id: 6,
+        name: "Age vs. Sleep Duration Statistical Analysis - Research Project",
+        description: "<p>Investigated the relationship between age and sleep patterns (ages 27–59) using <strong>descriptive and inferential statistics.</strong><br/> Utilized: <ul><li>linear regression (r ≈ 0.34)</li><li>Method of Moments for distribution modeling</li><li>hypothesis testing</li></ul><br/> to conclude that age does not significantly impact sleep duration within this demographic at a 3% significance level.</p>",
+        image: "/icons/statistics.jpg",
+        link: "https://github.com/Shiri-Noam-Team/Age-vs-Sleep-Duration",
     }
 ];
 
