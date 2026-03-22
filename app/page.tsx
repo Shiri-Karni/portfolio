@@ -5,6 +5,7 @@ import Contact from '../lib/components/Contact';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Streangths from '../lib/components/Streangths';
 import React from 'react';
 
 
@@ -29,30 +30,33 @@ export default function Home() {
         </div>
         <hr className="separator"></hr>
         <h2 className="middleHeadline">My Core Strengths</h2>
-        <img
-          src="/icons/principles.svg"
-          alt="strengths"
-          className="principles-img"
-          onClick={() => setLightboxOpen(true)}
-        />
-        {isLightboxOpen && (
-          <div
-            className="lightbox-overlay"
-            onClick={() => setLightboxOpen(false)}
-          >
-            <img
-              src="/icons/principles.svg"
-              alt="strengths-large"
-              className="lightbox-img"
-              onClick={e => e.stopPropagation()}
+        <div className="strengths-container">
+          <div className="strengths-wrapper">
+            <Streangths
+              title="Ownership & Initiative"
+              subtitle="The 'I've got this' mindset"
+              description="<p>I don’t just execute tasks - I own projects. </br/>
+                From identifying gaps to delivering end-to-end solutions, I take full responsibility and always look for the next way to add value.</p>"
             />
-            <button
-              className="lightbox-close-btn"
-              onClick={() => setLightboxOpen(false)}
-              aria-label="סגור"
-            >x</button>
+            <Streangths
+              title="Team Work & Leadership"
+              subtitle="Great things are never done alone"
+              description="<p>Coming from a background of leadership and mentorship, I thrive in environments where ideas are shared. I believe that the best products are born from diverse perspectives and seamless teamwork.</p>"
+            />
           </div>
-        )}
+          <div className="strengths-wrapper">
+            <Streangths
+              title="Striving for Excellence"
+              subtitle="Don’t just say it doesn’t work - make it work"
+              description="<p>I believe that nothing is out of reach. For me, challenges are simply opportunities to create innovative solutions and drive significant improvement. No matter the task, I am fueled by a constant drive to be the best version of myself and deliver exceptional results.</p>"
+            />
+            <Streangths
+              title="Bridging People & Technology"
+              subtitle="Tech-driven solutions for social impact"
+              description="<p>I operate at the vital intersection of data and human behavior. I believe that to build truly impactful products, deep technical expertise must be paired with a profound understanding of the end-user. My goal is to leverage technology as a tool for social progress, ensuring that every digital experience is as intuitive as it is powerful.</p>"
+            />
+          </div>
+        </div>
         <hr className="separator"></hr>
         <div id="contact-section">
           <h2 className="middleHeadline">Contact Me</h2>
