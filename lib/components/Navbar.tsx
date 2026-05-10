@@ -15,7 +15,6 @@ export default function Navbar() {
       </Link>
       <nav>
         <Link href="/projects">Projects</Link>
-        <Link href="/cv">CV</Link>
         <Link href="/#contact-section">Contact Me</Link>
       </nav>
     </header>
