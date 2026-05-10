@@ -1,6 +1,7 @@
-@import url("reset.css");
+@import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 
 /* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
@@ -245,68 +246,6 @@ button:hover {
   background-color: #d6669a;
 }
 
-.cv {
-  justify-self: center;
-}
-
-/* SingleProject component styles */
-.single-project-container {
-  max-width: 100%;
-  margin: 15px auto;
-  padding: 24px;
-  border: 1px solid #b94179;
-  border-radius: 8px;
-  background-color: #ffe3e348;
-}
-
-.single-project-title {
-  margin-bottom: 24px;
-}
-
-.single-project-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.single-project-image {
-  width: 400px;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0;
-  align-self: flex-start;
-  transition: transform 0.3s ease;
-}
-
-.single-project-image:hover {
-  transform: scale(1.05);
-}
-
-.single-project-description {
-  margin-bottom: 16px;
-}
-
-.single-project-link {
-  display: inline-block;
-  padding: 8px 20px;
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 15px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-
-.single-project-link:hover {
-  background: #c94181;
-}
-
-.app-name {
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-}
 
 .principles-img {
   cursor: pointer;
@@ -432,6 +371,230 @@ button:hover {
   margin: 2rem 0;
 }
 
+/* Project Card Styles */
+.project-card {
+  position: relative;
+  background-color: #df6d9256;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #374151; /* gray-700 */
+  width: 100%;
+  margin: 2%;
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.project-card__image-container {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #1f2937; /* gray-800 */
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.05);
+}
+
+.project-card__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #8a244e;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-card__title {
+  color: #5e1533;
+}
+
+.project-card__external-link {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  color: #9ca3af; /* gray-400 */
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.project-card__external-link:hover {
+  color: #570e36;
+  background-color: rgba(30, 58, 138, 0.2); /* blue-900/20 */
+}
+
+.project-card__description {
+  color: #1e1f21; /* gray-200 */
+  line-height: 1.625;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-size: 0.875rem;
+}
+
+/* Style for HTML content inside description */
+.project-card__description p {
+  margin-bottom: 0.5rem;
+}
+
+.project-card__button {
+  display: none; 
+  color: #60a5fa;
+  font-weight: 500;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.project-card__button:hover {
+  text-decoration: underline;
+  color: #93c5fd;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem; 
+  width: 100%;
+}
+
+/* Project Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-container {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 896px; /* max-w-4xl */
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close-button {
+  position: sticky;
+  top: 1rem;
+  float: right;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close-button:hover {
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+.modal-image-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #1f2937; /* gray-800 */
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  color: #5e1533; 
+  margin: 0;
+}
+
+.modal-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #5e1533; 
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.modal-link-button:hover {
+  background-color: #7f1d46;
+}
+
+.modal-description {
+  color: #374151; /* gray-700 */
+  line-height: 1.625;
+  font-size: 1.125rem; /* text-lg */
+  white-space: pre-line;
+}
+
+
 @media (max-width: 600px) {
   .single-project-content {
     flex-direction: column;
@@ -464,5 +627,23 @@ button:hover {
     max-width: 90vw;
     max-height: 80vh;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+    .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
 }
 
