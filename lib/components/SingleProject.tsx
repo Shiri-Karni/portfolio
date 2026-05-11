@@ -36,26 +36,36 @@ export default function SingleProject({ title, description, image, link, onReadM
             rel="noopener noreferrer"
             className="project-card__external-link"
             aria-label={`View ${title} project`}
-            /* מונע מהקליק "לבעבע" למעלה ולפתוח את המודאל כשרוצים רק ללכת ללינק */
             onClick={(e) => e.stopPropagation()} 
           >
             <ExternalLink size={20} />
           </a>
         </div>
 
-        <div
-          className="project-card__description"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+        <div className="project-card__description-wrapper">
+          <div
+            className="project-card__description"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+          <span 
+            className="project-card__read-more-link"
+            onClick={(e) => {
+              e.stopPropagation();
+              onReadMore();
+            }}
+          >
+            Read more...
+          </span>
+        </div>
 
         <button
           onClick={(e) => {
-            e.stopPropagation(); // ליתר ביטחון
+            e.stopPropagation(); 
             onReadMore();
           }}
           className="project-card__button"
         >
-          Read more
+          View Full Project
         </button>
       </div>
     </div>

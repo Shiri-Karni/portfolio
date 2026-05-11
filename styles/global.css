@@ -596,6 +596,33 @@ button:hover {
   white-space: pre-line;
 }
 
+.project-card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  position: relative;
+}
+
+
+.project-card__read-more-link {
+  color: #65133c;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.project-card__read-more-link:hover {
+  text-decoration: underline;
+}
+
+
+.project-card__description-wrapper {
+    margin-bottom: 15px;
+}
+
 
 @media (max-width: 600px) {
   .single-project-content {
