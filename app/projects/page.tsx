@@ -17,7 +17,7 @@ const projects = [
         id: 2,
         title: "Shabbat Abroad",
         description: "Developed a React-based web application designed to bridge the gap between Jewish hosts worldwide and Israeli travelers. The platform facilitates cultural and communal connections by allowing guests to find a warm Shabbat dinner and a sense of 'home away from home' anywhere in the world. <br/><br/><strong>Technical Highlight:</strong> Built with a focus on seamless user experience, responsive design, and intuitive matching between hosts and guests to foster meaningful real-world interactions.",
-        image: "/icons/shabbat.jpeg",
+        image: "/icons/shabbat abroad.png",
         link: "https://shabbat-abroad.web.app/",
     },
     {
