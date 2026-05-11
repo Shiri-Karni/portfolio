@@ -116,6 +116,7 @@ export default function ProjectsPage() {
   return (
     <main className="projectsPage">
       <h1 className="pageTitle">My Projects</h1>
+      <p> During my studies, I got the opportunity to take part in various research and development projects. <br/> Here, you can explore each project in detail. </p>
       <YourProjectsSection />
     </main>
   );
