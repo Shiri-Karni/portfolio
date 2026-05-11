@@ -2,15 +2,28 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 
+type ProjectDomain = 'research' | 'data' | 'UXUI' | 'fullstack' | 'user research';
+
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   link: string;
   onReadMore: () => void;
+  domains?: ProjectDomain[];
 }
 
-export default function SingleProject({ title, description, image, link, onReadMore }: ProjectCardProps) {
+export default function SingleProject({ title, description, image, link, domains, onReadMore }: ProjectCardProps) {
+   const getDomainClass = (domain: ProjectDomain) => {
+    const classes: Record<ProjectDomain, string> = {
+      'research': 'research',
+      'data': 'data',
+      'UXUI': 'uxui',
+      'fullstack': 'fullstack',
+      'user research': 'user-research'
+    };
+    return classes[domain];
+  };
   return (
     <div 
       className="project-card" 
@@ -26,6 +39,16 @@ export default function SingleProject({ title, description, image, link, onReadM
       </div>
 
       <div className="project-card__content">
+        <div className="project-domains">
+          {domains?.map((domain) => (
+            <span
+              key={domain}
+              className={`domain-tag ${getDomainClass(domain)}`}
+            >
+              {domain}
+            </span>
+          ))}
+        </div>
         <div className="project-card__header">
           <h3 className="project-card__title">
             {title}

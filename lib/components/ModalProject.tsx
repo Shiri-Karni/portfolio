@@ -2,6 +2,8 @@
 import { X, ExternalLink } from 'lucide-react';
 import { useEffect } from 'react';
 
+type ProjectDomain = 'research' | 'data' | 'UXUI' | 'fullstack' | 'user research';
+
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -10,6 +12,7 @@ interface ProjectModalProps {
     description: string; 
     image: string;
     link: string;
+    domains?: ProjectDomain[];
   } | null;
 }
 
@@ -41,6 +44,17 @@ function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
     };
   }, [isOpen, onClose]);
 
+  const getDomainClass = (domain: ProjectDomain) => {
+    const classes: Record<ProjectDomain, string> = {
+      'research': 'research',
+      'data': 'data',
+      'UXUI': 'uxui',
+      'fullstack': 'fullstack',
+      'user research': 'user-research'
+    };
+    return classes[domain];
+  };
+
   if (!isOpen || !project) return null;
 
   return (
@@ -63,6 +77,16 @@ function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
         </div>
 
         <div className="modal-body">
+               <div className="modal-domains">
+                {project.domains?.map((domain) => (
+                  <span
+                  key={domain}
+                  className={`modal-domain-tag ${getDomainClass(domain)}`}
+                  >
+                  {domain}
+                  </span>
+          ))}
+        </div>
           <div className="modal-header">
             <h2 className="modal-title">
               {project.title}

@@ -623,6 +623,98 @@ button:hover {
     margin-bottom: 15px;
 }
 
+/* Domain Tags Styles */
+.project-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.domain-tag {
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.domain-tag.research {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+  border-color: #e9d5ff;
+}
+
+.domain-tag.data {
+  background-color: #dbeafe;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.domain-tag.uxui {
+  background-color: #fce7f3;
+  color: #db2777;
+  border-color: #fbcfe8;
+}
+
+.domain-tag.fullstack {
+  background-color: #dcfce7;
+  color: #16a34a;
+  border-color: #bbf7d0;
+}
+
+.domain-tag.user-research {
+  background-color: #fed7aa;
+  color: #ea580c;
+  border-color: #fdba74;
+}
+
+/* Modal Domain Tags (גדולות יותר) */
+.modal-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-domain-tag {
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.modal-domain-tag.research {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+  border-color: #e9d5ff;
+}
+
+.modal-domain-tag.data {
+  background-color: #dbeafe;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.modal-domain-tag.uxui {
+  background-color: #fce7f3;
+  color: #db2777;
+  border-color: #fbcfe8;
+}
+
+.modal-domain-tag.fullstack {
+  background-color: #dcfce7;
+  color: #16a34a;
+  border-color: #bbf7d0;
+}
+
+.modal-domain-tag.user-research {
+  background-color: #fed7aa;
+  color: #ea580c;
+  border-color: #fdba74;
+}
+
 
 @media (max-width: 600px) {
   .single-project-content {
